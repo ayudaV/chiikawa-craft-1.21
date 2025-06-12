@@ -2,5 +2,9 @@
   "item.chiikawacraft.pink_garnet": "Pink Garnet",
   "item.chiikawacraft.raw_pink_garnet": "Raw Pink Garnet",
   "block.chiikawacraft.pink_garnet_block": "Pink Garnet Block",
-  "block.chiikawacraft.pink_garnet_ore": "Pink Garnet Ore"
+  "block.chiikawacraft.pink_garnet_ore": "Pink Garnet Ore",
+  "block.chiikawacraft.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+
+  "itemgroup.chiikawacraft.pink_garnet_items": "Pink Garnet Items",
+  "itemgroup.chiikawacraft.chiikawacraft_items": "Chiikawa Craft"
 }
