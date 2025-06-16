@@ -27,10 +27,10 @@ public class ModItemGroups {
 
     public static final ItemGroup CHIIKAWACRAFT_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(ChiikawaCraft.MOD_ID, "chiikawacraft_items"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.PINK_GARNET_BLOCK))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.CHIIKAWA_SPAWN_EGG))
                     .displayName(Text.translatable("itemgroup.chiikawacraft.chiikawacraft_items"))
                     .entries(((displayContext, entries) -> {
-
+                        entries.add(ModItems.CHIIKAWA_SPAWN_EGG);
                     }))
                     .build());
 

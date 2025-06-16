@@ -2,7 +2,10 @@ package net.jty.chiikawacraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.jty.chiikawacraft.block.ModBlocks;
+import net.jty.chiikawacraft.entity.ModEntities;
+import net.jty.chiikawacraft.entity.custom.ChiikawaEntity;
 import net.jty.chiikawacraft.item.ModItemGroups;
 import net.jty.chiikawacraft.item.ModItems;
 import org.slf4j.Logger;
@@ -25,5 +28,7 @@ public class ChiikawaCraft implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModEntities.registerModEntities();
+		FabricDefaultAttributeRegistry.register(ModEntities.CHIIKAWA, ChiikawaEntity.createAttributes());
 	}
 }
