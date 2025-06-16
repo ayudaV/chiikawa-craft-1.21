@@ -1,7 +1,6 @@
 package net.jty.chiikawacraft.entity.custom;
 
 import net.jty.chiikawacraft.entity.ModEntities;
-import net.jty.chiikawacraft.item.ModItems;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.AnimationState;

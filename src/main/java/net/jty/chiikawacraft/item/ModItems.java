@@ -1,10 +1,7 @@
 package net.jty.chiikawacraft.item;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jty.chiikawacraft.ChiikawaCraft;
 import net.jty.chiikawacraft.entity.ModEntities;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

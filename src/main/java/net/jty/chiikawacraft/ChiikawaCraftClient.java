@@ -11,6 +11,6 @@ public class ChiikawaCraftClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         EntityModelLayerRegistry.registerModelLayer(ChiikawaModel.CHIIKAWA, ChiikawaModel::getTexturedModelData);
-        EntityRendererRegistry.register(ModEntities.CHIIKAWA, ChiikawaRenderer::new);;
+        EntityRendererRegistry.register(ModEntities.CHIIKAWA, ChiikawaRenderer::new);
     }
 }

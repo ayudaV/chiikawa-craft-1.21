@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> CHIIKAWA_CITY_BLOCKS = createTag("chiikawa_city_blocks");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(ChiikawaCraft.MOD_ID, name));
