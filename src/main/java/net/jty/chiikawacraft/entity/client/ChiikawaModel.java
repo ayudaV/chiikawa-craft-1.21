@@ -16,41 +16,53 @@ import net.minecraft.util.math.MathHelper;
 public class ChiikawaModel<T extends ChiikawaEntity> extends SinglePartEntityModel<T> {
 
     public static final EntityModelLayer CHIIKAWA = new EntityModelLayer(Identifier.of(ChiikawaCraft.MOD_ID, "chiikawa"), "main");
+    private final ModelPart Chiikawa;
     private final ModelPart Body;
-    private final ModelPart RightLeg;
-    private final ModelPart LeftLeg;
     private final ModelPart Head;
-
     public ChiikawaModel(ModelPart root) {
-        this.Body = root.getChild("Body");
-        this.RightLeg = root.getChild("RightLeg");
-        this.LeftLeg = root.getChild("LeftLeg");
-        this.Head = root.getChild("Head");
+        this.Chiikawa = root.getChild("Chiikawa");
+        this.Body = this.Chiikawa.getChild("Body");
+        this.Head = this.Chiikawa.getChild("Head");
     }
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData Body = modelPartData.addChild("Body", ModelPartBuilder.create().uv(0, 12).cuboid(-3.0F, -6.0F, -2.0F, 6.0F, 4.0F, 5.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
+        ModelPartData Chiikawa = modelPartData.addChild("Chiikawa", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 26.0F, 0.0F));
 
-        ModelPartData RightLeg = modelPartData.addChild("RightLeg", ModelPartBuilder.create().uv(0, 21).cuboid(-3.0F, 0.0F, -1.0F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 22.0F, 0.0F));
+        ModelPartData Body = Chiikawa.addChild("Body", ModelPartBuilder.create().uv(0, 21).cuboid(-3.0F, -7.0F, -2.0F, 6.0F, 3.0F, 4.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
-        ModelPartData LeftLeg = modelPartData.addChild("LeftLeg", ModelPartBuilder.create().uv(8, 21).cuboid(1.0F, 0.0F, -1.0F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 22.0F, 0.0F));
+        ModelPartData Legs = Body.addChild("Legs", ModelPartBuilder.create(), ModelTransform.pivot(2.0F, -4.0F, 0.0F));
 
-        ModelPartData Head = modelPartData.addChild("Head", ModelPartBuilder.create().uv(0, 0).cuboid(-4.0F, -8.0F, -3.0F, 8.0F, 6.0F, 6.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 21.0F, 0.0F));
-        return TexturedModelData.of(modelData, 32, 32);
+        ModelPartData LegL = Legs.addChild("LegL", ModelPartBuilder.create().uv(29, 32).cuboid(-1.0F, 0.0F, -0.3F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+
+        ModelPartData LegR = Legs.addChild("LegR", ModelPartBuilder.create().uv(23, 32).cuboid(-1.0F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-3.0F, 0.0F, 0.0F));
+
+        ModelPartData Arms = Body.addChild("Arms", ModelPartBuilder.create(), ModelTransform.pivot(4.0F, -7.0F, 0.0F));
+
+        ModelPartData ArmL = Arms.addChild("ArmL", ModelPartBuilder.create().uv(33, 5).cuboid(0.0F, 0.0F, 0.0F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-1.0F, 0.0F, -1.0F));
+
+        ModelPartData ArmR = Arms.addChild("ArmR", ModelPartBuilder.create().uv(33, 1).cuboid(-1.0F, 0.0F, 0.0F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-7.0F, 0.0F, -1.0F));
+
+        ModelPartData Head = Chiikawa.addChild("Head", ModelPartBuilder.create().uv(1, 1).cuboid(-4.0F, -5.0F, -4.0F, 8.0F, 6.0F, 7.0F, new Dilation(0.0F))
+                .uv(1, 15).cuboid(-3.0F, -6.0F, -3.0F, 6.0F, 1.0F, 5.0F, new Dilation(0.0F))
+                .uv(21, 22).cuboid(-5.0F, -4.0F, -3.0F, 1.0F, 4.0F, 5.0F, new Dilation(0.0F))
+                .uv(1, 29).cuboid(4.0F, -4.0F, -3.0F, 1.0F, 4.0F, 5.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -8.0F, 0.0F));
+
+        ModelPartData EarL = Head.addChild("EarL", ModelPartBuilder.create().uv(15, 32).cuboid(0.0F, -2.0F, -1.0F, 2.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(3.0F, -5.0F, 0.0F));
+
+        ModelPartData EarR = Head.addChild("EarR", ModelPartBuilder.create().uv(25, 15).cuboid(-2.0F, -2.0F, -1.0F, 2.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-3.0F, -5.0F, 0.0F));
+        return TexturedModelData.of(modelData, 31, 31);
     }
+
 
     @Override
     public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
-        Body.render(matrices, vertexConsumer, light, overlay, color);
-        RightLeg.render(matrices, vertexConsumer, light, overlay, color);
-        LeftLeg.render(matrices, vertexConsumer, light, overlay, color);
-        Head.render(matrices, vertexConsumer, light, overlay, color);
+        Chiikawa.render(matrices, vertexConsumer, light, overlay, color);
     }
 
     @Override
     public ModelPart getPart() {
-        return Body;
+        return Chiikawa;
     }
 
     @Override
