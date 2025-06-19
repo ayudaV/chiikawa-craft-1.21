@@ -8,6 +8,7 @@ import net.jty.chiikawacraft.item.ModItems;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
@@ -22,20 +23,38 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-        List<ItemConvertible> PINK_GARNET_SMELTABLES = List.of(ModItems.RAW_PINK_GARNET, ModBlocks.PINK_GARNET_ORE, ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+        List<ItemConvertible> LIVING_GEM_SMELTABLES = List.of(ModItems.RAW_LIVING_GEM, ModBlocks.LIVING_GEM_ORE, ModBlocks.LIVING_GEM_DEEPSLATE_ORE);
 
-        offerSmelting(exporter, PINK_GARNET_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_GARNET, 0.25f, 200, "pink_garnet");
-        offerBlasting(exporter, PINK_GARNET_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_GARNET, 0.25f, 100, "pink_garnet");
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModItems.LIVING_GEM, ModItems.RAW_LIVING_GEM);
+        offerSmelting(exporter, LIVING_GEM_SMELTABLES, RecipeCategory.MISC, ModItems.LIVING_GEM, 0.25f, 200, "living_gem");
+        offerBlasting(exporter, LIVING_GEM_SMELTABLES, RecipeCategory.MISC, ModItems.LIVING_GEM, 0.25f, 100, "living_gem");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.PINK_GARNET, RecipeCategory.DECORATIONS, ModBlocks.PINK_GARNET_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.LIVING_GEM, RecipeCategory.DECORATIONS, ModBlocks.LIVING_GEM_BLOCK);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PINK_GARNET_BLOCK)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIVING_GEM_BLOCK)
                 .pattern("RRR")
                 .pattern("RRR")
                 .pattern("RRR")
-                .input('R', ModItems.RAW_PINK_GARNET)
-                .criterion(hasItem(ModItems.RAW_PINK_GARNET), conditionsFromItem(ModItems.RAW_PINK_GARNET))
-                .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "pink_garnet_block_from_raw_pink_garnet"));
+                .input('R', ModItems.RAW_LIVING_GEM)
+                .criterion(hasItem(ModItems.RAW_LIVING_GEM), conditionsFromItem(ModItems.RAW_LIVING_GEM))
+                .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "living_gem_block_from_raw_living_gem"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IRON_YOROI_HELMET)
+                .pattern("III")
+                .pattern("ILI")
+                .pattern("   ")
+                .input('L', ModItems.LIVING_GEM)
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(ModItems.LIVING_GEM), conditionsFromItem(ModItems.LIVING_GEM))
+                .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "iron_yoroi_helmet"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GOLD_YOROI_HELMET)
+                .pattern("GGG")
+                .pattern("GLG")
+                .pattern("   ")
+                .input('L', ModItems.LIVING_GEM)
+                .input('G', Items.GOLD_INGOT)
+                .criterion(hasItem(ModItems.LIVING_GEM), conditionsFromItem(ModItems.LIVING_GEM))
+                .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "gold_yoroi_helmet"));
      }
 }

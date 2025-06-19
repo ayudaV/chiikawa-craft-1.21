@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.jty.chiikawacraft.item.ModItems;
 import net.jty.chiikawacraft.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -17,7 +18,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
-                .add(ModItems.PINK_GARNET)
-                .add(ModItems.RAW_PINK_GARNET);
+                .add(ModItems.LIVING_GEM)
+                .add(ModItems.RAW_LIVING_GEM);
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.IRON_YOROI_HELMET)
+                .add(ModItems.GOLD_YOROI_HELMET);
+
     }
 }

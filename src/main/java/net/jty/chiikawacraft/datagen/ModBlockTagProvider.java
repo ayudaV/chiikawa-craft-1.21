@@ -17,11 +17,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.PINK_GARNET_BLOCK)
-                .add(ModBlocks.PINK_GARNET_ORE)
-                .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+                .add(ModBlocks.LIVING_GEM_BLOCK)
+                .add(ModBlocks.LIVING_GEM_ORE)
+                .add(ModBlocks.LIVING_GEM_DEEPSLATE_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+                .add(ModBlocks.LIVING_GEM_DEEPSLATE_ORE);
     }
 }

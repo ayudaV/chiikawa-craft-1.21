@@ -8,6 +8,7 @@ import net.jty.chiikawacraft.entity.ModEntities;
 import net.jty.chiikawacraft.entity.custom.ChiikawaEntity;
 import net.jty.chiikawacraft.item.ModItemGroups;
 import net.jty.chiikawacraft.item.ModItems;
+import net.jty.chiikawacraft.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,5 +31,6 @@ public class ChiikawaCraft implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModEntities.registerModEntities();
 		FabricDefaultAttributeRegistry.register(ModEntities.CHIIKAWA, ChiikawaEntity.createAttributes());
+		ModWorldGeneration.generateModWorldGen();
 	}
 }

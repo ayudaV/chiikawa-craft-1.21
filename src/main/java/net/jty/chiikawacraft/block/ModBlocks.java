@@ -16,15 +16,15 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
 
-    public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block",
+    public static final Block LIVING_GEM_BLOCK = registerBlock("living_gem_block",
             new Block(AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
-    public static final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
+    public static final Block LIVING_GEM_ORE = registerBlock("living_gem_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
                     AbstractBlock.Settings.create().strength(3f).requiresTool()));
 
-    public static final Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore",
+    public static final Block LIVING_GEM_DEEPSLATE_ORE = registerBlock("living_gem_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
@@ -42,8 +42,8 @@ public class ModBlocks {
         ChiikawaCraft.LOGGER.info("Registering Mod Blocks for " + ChiikawaCraft.MOD_ID);
 
 //        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-//            entries.add(PINK_GARNET_BLOCK);
-//            entries.add(PINK_GARNET_ORE);
+//            entries.add(LIVING_GEM_BLOCK);
+//            entries.add(LIVING_GEM_ORE);
 //
 //        });
     }

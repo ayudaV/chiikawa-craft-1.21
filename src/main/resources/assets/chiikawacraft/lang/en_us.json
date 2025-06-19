@@ -1,14 +1,17 @@
 {
-  "item.chiikawacraft.pink_garnet": "Pink Garnet",
-  "item.chiikawacraft.raw_pink_garnet": "Raw Pink Garnet",
+  "item.chiikawacraft.living_gem": "Living Gem",
+  "item.chiikawacraft.raw_living_gem": "Raw Living Gem",
   "item.chiikawacraft.chiikawa_spawn_egg": "Chiikawa Spawn Egg",
 
-  "block.chiikawacraft.pink_garnet_block": "Pink Garnet Block",
-  "block.chiikawacraft.pink_garnet_ore": "Pink Garnet Ore",
-  "block.chiikawacraft.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+  "block.chiikawacraft.living_gem_block": "Living Gem Block",
+  "block.chiikawacraft.living_gem_ore": "Living Gem Ore",
+  "block.chiikawacraft.living_gem_deepslate_ore": "Living Gem Deepslate Ore",
 
-  "itemgroup.chiikawacraft.pink_garnet_items": "Pink Garnet Items",
+  "itemgroup.chiikawacraft.living_gem_items": "Living Gem Items",
   "itemgroup.chiikawacraft.chiikawacraft_items": "Chiikawa Craft",
 
-  "entity.chiikawacraft.chiikawa": "Chiikawa"
+  "entity.chiikawacraft.chiikawa": "Chiikawa",
+
+  "item.chiikawacraft.iron_yoroi_helmet": "Iron Yoroi Helmet",
+  "item.chiikawacraft.gold_yoroi_helmet": "Gold Yoroi Helmet"
 }

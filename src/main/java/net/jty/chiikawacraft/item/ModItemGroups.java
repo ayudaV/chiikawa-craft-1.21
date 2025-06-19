@@ -12,16 +12,19 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
 
-    public static final ItemGroup PINK_GARNET_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(ChiikawaCraft.MOD_ID, "pink_garnet_items"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.PINK_GARNET))
-                    .displayName(Text.translatable("itemgroup.chiikawacraft.pink_garnet_items"))
+    public static final ItemGroup LIVING_GEM_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ChiikawaCraft.MOD_ID, "living_gem_items"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.LIVING_GEM))
+                    .displayName(Text.translatable("itemgroup.chiikawacraft.living_gem_items"))
                     .entries(((displayContext, entries) -> {
-                        entries.add(ModItems.PINK_GARNET);
-                        entries.add(ModItems.RAW_PINK_GARNET);
-                        entries.add(ModBlocks.PINK_GARNET_BLOCK);
-                        entries.add(ModBlocks.PINK_GARNET_ORE);
-                        entries.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+                        entries.add(ModItems.LIVING_GEM);
+                        entries.add(ModItems.RAW_LIVING_GEM);
+                        entries.add(ModBlocks.LIVING_GEM_BLOCK);
+                        entries.add(ModBlocks.LIVING_GEM_ORE);
+                        entries.add(ModBlocks.LIVING_GEM_DEEPSLATE_ORE);
+                        entries.add(ModItems.IRON_YOROI_HELMET);
+                        entries.add(ModItems.GOLD_YOROI_HELMET);
+
                     }))
                     .build());
 
