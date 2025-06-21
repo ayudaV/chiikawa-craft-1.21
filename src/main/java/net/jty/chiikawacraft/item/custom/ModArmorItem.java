@@ -1,6 +1,7 @@
 package net.jty.chiikawacraft.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import net.jty.chiikawacraft.damage_type.ModDamageTypes;
 import net.jty.chiikawacraft.item.ModArmorMaterials;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
@@ -23,9 +24,11 @@ public class ModArmorItem extends ArmorItem {
     private static final Map<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>>())
                     .put(ModArmorMaterials.IRON_YOROI_ARMOR_MATERIAL,
-                            List.of(new StatusEffectInstance(StatusEffects.BLINDNESS, 400, 2, false, false)))
+                            List.of(new StatusEffectInstance(StatusEffects.BLINDNESS, 400, 2, false, false),
+                                    new StatusEffectInstance(StatusEffects.WITHER, 400, 2, false, false)))
                     .put(ModArmorMaterials.GOLD_YOROI_ARMOR_MATERIAL,
-                            List.of(new StatusEffectInstance(StatusEffects.BLINDNESS, 400, 2, false, false)))
+                            List.of(new StatusEffectInstance(StatusEffects.BLINDNESS, 400, 2, false, false),
+                                    new StatusEffectInstance(StatusEffects.WITHER, 400, 2, false, false)))
                     .build();
     private static final Map<RegistryEntry<ArmorMaterial>, RegistryEntry<ArmorMaterial>> SECUNDARY_MATERIAL =
             (new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, RegistryEntry<ArmorMaterial>>())
@@ -43,6 +46,7 @@ public class ModArmorItem extends ArmorItem {
             if(entity instanceof PlayerEntity player) {
                 if(hasFullSuitOfArmorOn(player)) {
                     evaluateArmorEffects(player);
+                    //player.damage(ModDamageTypes.of(world, ModDamageTypes.YOROI_DAMAGE_TYPE), 1.0f);
                 }
             }
         }

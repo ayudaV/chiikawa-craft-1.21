@@ -34,8 +34,22 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.chiikawacraft.chiikawacraft_items"))
                     .entries(((displayContext, entries) -> {
                         entries.add(ModItems.CHIIKAWA_SPAWN_EGG);
+                        entries.add(ModItems.HACHIWARE_SPAWN_EGG);
+                        entries.add(ModItems.USAGI_SPAWN_EGG);
+                        entries.add(ModItems.YOROI_SPAWN_EGG);
+                        entries.add(ModItems.PANCAKE);
                     }))
                     .build());
+
+    public static final ItemGroup CHIIKAWACRAFT_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ChiikawaCraft.MOD_ID, "chiikawacraft_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.PEDESTAL))
+                    .displayName(Text.translatable("itemgroup.chiikawacraft.chiikawacraft_blocks"))
+                    .entries(((displayContext, entries) -> {
+                        entries.add(ModBlocks.PEDESTAL);
+                    }))
+                    .build());
+
 
     public static void registerItemGroups() {
         ChiikawaCraft.LOGGER.info("Registering Item Groups for " + ChiikawaCraft.MOD_ID);

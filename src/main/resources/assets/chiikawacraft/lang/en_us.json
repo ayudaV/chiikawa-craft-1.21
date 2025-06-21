@@ -2,16 +2,24 @@
   "item.chiikawacraft.living_gem": "Living Gem",
   "item.chiikawacraft.raw_living_gem": "Raw Living Gem",
   "item.chiikawacraft.chiikawa_spawn_egg": "Chiikawa Spawn Egg",
+  "item.chiikawacraft.hachiware_spawn_egg": "Hachiware Spawn Egg",
+  "item.chiikawacraft.usagi_spawn_egg": "Usagi Spawn Egg",
+  "item.chiikawacraft.yoroi_spawn_egg": "Yoroi Spawn Egg",
+  "item.chiikawacraft.pancake": "Pancake",
+  "item.chiikawacraft.iron_yoroi_helmet": "Iron Yoroi Helmet",
+  "item.chiikawacraft.gold_yoroi_helmet": "Gold Yoroi Helmet",
 
   "block.chiikawacraft.living_gem_block": "Living Gem Block",
   "block.chiikawacraft.living_gem_ore": "Living Gem Ore",
   "block.chiikawacraft.living_gem_deepslate_ore": "Living Gem Deepslate Ore",
+  "block.chiikawacraft.pedestal": "Pedestal",
 
   "itemgroup.chiikawacraft.living_gem_items": "Living Gem Items",
-  "itemgroup.chiikawacraft.chiikawacraft_items": "Chiikawa Craft",
+  "itemgroup.chiikawacraft.chiikawacraft_items": "Chiikawa Craft Items",
+  "itemgroup.chiikawacraft.chiikawacraft_blocks": "Chiikawa Craft Blocks",
 
   "entity.chiikawacraft.chiikawa": "Chiikawa",
-
-  "item.chiikawacraft.iron_yoroi_helmet": "Iron Yoroi Helmet",
-  "item.chiikawacraft.gold_yoroi_helmet": "Gold Yoroi Helmet"
+  "entity.chiikawacraft.hachiware": "Hachiware",
+  "entity.chiikawacraft.usagi": "Usagi",
+  "entity.chiikawacraft.yoroi": "Yoroi"
 }

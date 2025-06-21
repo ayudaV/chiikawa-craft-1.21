@@ -30,7 +30,13 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.LIVING_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_LIVING_GEM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PANCAKE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.CHIIKAWA_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.HACHIWARE_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.USAGI_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.YOROI_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.IRON_YOROI_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.GOLD_YOROI_HELMET));
     }

@@ -1,7 +1,9 @@
 package net.jty.chiikawacraft.entity.custom;
 
 import net.jty.chiikawacraft.entity.ModEntities;
+import net.jty.chiikawacraft.item.ModItems;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
@@ -14,22 +16,27 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
 
 public class ChiikawaEntity extends AnimalEntity {
     public final AnimationState idleAnimationState = new AnimationState();
     private  int idleAnimationTimeout = 0;
+    //private static final TrackedData<Boolean> FROM_BUCKET = DataTracker.registerData(ChiikawaEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
     public ChiikawaEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
     }
 
+
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new AnimalMateGoal(this, 1.15D));
-        this.goalSelector.add(2, new TemptGoal(this, 1.25D, Ingredient.ofItems(Items.HONEY_BOTTLE), true));
+        this.goalSelector.add(2, new TemptGoal(this, 1.25D, Ingredient.ofItems(ModItems.PANCAKE), true));
         this.goalSelector.add(3, new FollowParentGoal(this, 1.1D));
         this.goalSelector.add(4, new WanderAroundFarGoal(this, 1.0D));
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
@@ -53,6 +60,10 @@ public class ChiikawaEntity extends AnimalEntity {
         }
     }
 
+//    public ActionResult interactMob(PlayerEntity player, Hand hand) {
+//        return Bucketable.tryBucket(player, hand, this).orElse(super.interactMob(player, hand));
+//    }
+
     @Override
     public void tick() {
         super.tick();
@@ -64,11 +75,72 @@ public class ChiikawaEntity extends AnimalEntity {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isOf(Items.HONEY_BOTTLE);
+        return stack.isOf(ModItems.PANCAKE);
     }
 
     @Override
     public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.CHIIKAWA.create(world);
     }
+
+
+    /* SOUNDS */
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.ENTITY_PARROT_AMBIENT;
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return SoundEvents.ENTITY_ALLAY_HURT;
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_PANDA_DEATH;
+    }
+
+//    @Override
+//    public boolean isFromBucket() {
+//        return this.dataTracker.get(FROM_BUCKET);
+//    }
+//    @Override
+//    public void setFromBucket(boolean fromBucket) {
+//        this.dataTracker.set(FROM_BUCKET, fromBucket);
+//    }
+//
+//
+//
+//
+//    @Override
+//    public void copyDataToStack(ItemStack stack) {
+//        Bucketable.copyDataToStack(this, stack);
+//        NbtComponent.set(DataComponentTypes.BUCKET_ENTITY_DATA, stack, nbt -> {
+//            nbt.putInt("Age", this.getBreedingAge());
+//        });
+//    }
+//
+//    @Override
+//    public void copyDataFromNbt(NbtCompound nbt) {
+//        Bucketable.copyDataFromNbt(this, nbt);
+//        if (nbt.contains("Age")) {
+//            this.setBreedingAge(nbt.getInt("Age"));
+//        }
+//        if (nbt.contains("HuntingCooldown")) {
+//            this.getBrain().remember(MemoryModuleType.HAS_HUNTING_COOLDOWN, true, nbt.getLong("HuntingCooldown"));
+//        }
+//    }
+//
+//    @Override
+//    public ItemStack getBucketItem() {
+//        return new ItemStack(Items.AXOLOTL_BUCKET);
+//    }
+//
+//    @Override
+//    public SoundEvent getBucketFillSound() {
+//        return SoundEvents.ITEM_BUCKET_FILL_AXOLOTL;
+//    }
 }

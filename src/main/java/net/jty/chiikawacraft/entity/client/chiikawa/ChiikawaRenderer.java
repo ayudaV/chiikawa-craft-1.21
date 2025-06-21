@@ -1,4 +1,4 @@
-package net.jty.chiikawacraft.entity.client;
+package net.jty.chiikawacraft.entity.client.chiikawa;
 
 import net.jty.chiikawacraft.ChiikawaCraft;
 import net.jty.chiikawacraft.entity.custom.ChiikawaEntity;

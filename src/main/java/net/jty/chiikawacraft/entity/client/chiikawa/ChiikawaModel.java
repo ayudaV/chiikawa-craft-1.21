@@ -1,4 +1,4 @@
-package net.jty.chiikawacraft.entity.client;
+package net.jty.chiikawacraft.entity.client.chiikawa;
 
 import net.jty.chiikawacraft.ChiikawaCraft;
 import net.jty.chiikawacraft.entity.custom.ChiikawaEntity;
@@ -24,6 +24,7 @@ public class ChiikawaModel<T extends ChiikawaEntity> extends SinglePartEntityMod
         this.Body = this.Chiikawa.getChild("Body");
         this.Head = this.Chiikawa.getChild("Head");
     }
+
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();

@@ -14,9 +14,19 @@ import net.jty.chiikawacraft.item.ModArmorMaterials;
 public class ModItems {
     public static final Item LIVING_GEM = registerItem("living_gem", new Item(new Item.Settings()));
     public static final Item RAW_LIVING_GEM = registerItem("raw_living_gem", new Item(new Item.Settings()));
+    public static final Item PANCAKE = registerItem("pancake", new Item(new Item.Settings().food(ModFoodComponents.PANCAKE)));
 
     public static final Item CHIIKAWA_SPAWN_EGG = registerItem("chiikawa_spawn_egg",
-            new SpawnEggItem(ModEntities.CHIIKAWA, 0xffffff, 0xffd9f5, new Item.Settings()));
+            new SpawnEggItem(ModEntities.CHIIKAWA, 0xfbf9f7, 0xf3c7cc, new Item.Settings()));
+
+    public static final Item HACHIWARE_SPAWN_EGG = registerItem("hachiware_spawn_egg",
+            new SpawnEggItem(ModEntities.HACHIWARE, 0xfbf9f7, 0x79acc4, new Item.Settings()));
+
+    public static final Item USAGI_SPAWN_EGG = registerItem("usagi_spawn_egg",
+            new SpawnEggItem(ModEntities.USAGI, 0xfbf3cc, 0xffc2c9, new Item.Settings()));
+
+    public static final Item YOROI_SPAWN_EGG = registerItem("yoroi_spawn_egg",
+            new SpawnEggItem(ModEntities.YOROI, 0x4a4a4a, 0xa6a6a6, new Item.Settings()));
 
 
     public static final Item IRON_YOROI_HELMET = registerItem("iron_yoroi_helmet",
@@ -37,5 +47,15 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
             entries.add(CHIIKAWA_SPAWN_EGG);
         });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
+            entries.add(HACHIWARE_SPAWN_EGG);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
+            entries.add(USAGI_SPAWN_EGG);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
+            entries.add(YOROI_SPAWN_EGG);
+        });
+
     }
 }

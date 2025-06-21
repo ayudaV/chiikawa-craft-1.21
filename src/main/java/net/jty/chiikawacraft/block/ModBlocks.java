@@ -2,6 +2,7 @@ package net.jty.chiikawacraft.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jty.chiikawacraft.ChiikawaCraft;
+import net.jty.chiikawacraft.block.custom.PedestalBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -27,6 +28,9 @@ public class ModBlocks {
     public static final Block LIVING_GEM_DEEPSLATE_ORE = registerBlock("living_gem_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+
+    public static final Block PEDESTAL = registerBlock("pedestal",
+            new PedestalBlock(AbstractBlock.Settings.create().nonOpaque()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
