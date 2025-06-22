@@ -1,0 +1,56 @@
+{
+  "entity_chiikawa_death": {
+    "subtitle": "sounds.chiikawacraft.chiikawa_death_sound",
+    "sounds": [
+      "chiikawacraft:chiikawa_death_sound"
+    ]
+  },
+  "entity_chiikawa_hurt": {
+    "subtitle": "sounds.chiikawacraft.chiikawa_hurt_sound",
+    "sounds": [
+      "chiikawacraft:chiikawa_hurt_sound"
+    ]
+  },
+  "entity_chiikawa_idle": {
+    "subtitle": "sounds.chiikawacraft.chiikawa_idle_sound",
+    "sounds": [
+      "chiikawacraft:chiikawa_idle_sound"
+    ]
+  },
+  "entity_hachiware_death": {
+    "subtitle": "sounds.chiikawacraft.hachiware_death_sound",
+    "sounds": [
+      "chiikawacraft:hachiware_death_sound"
+    ]
+  },
+  "entity_hachiware_hurt": {
+    "subtitle": "sounds.chiikawacraft.hachiware_hurt_sound",
+    "sounds": [
+      "chiikawacraft:hachiware_hurt_sound"
+    ]
+  },
+  "entity_hachiware_idle": {
+    "subtitle": "sounds.chiikawacraft.hachiware_idle_sound",
+    "sounds": [
+      "chiikawacraft:hachiware_idle_sound"
+    ]
+  },
+  "entity_usagi_death": {
+    "subtitle": "sounds.chiikawacraft.usagi_death_sound",
+    "sounds": [
+      "chiikawacraft:usagi_death_sound"
+    ]
+  },
+  "entity_usagi_hurt": {
+    "subtitle": "sounds.chiikawacraft.usagi_hurt_sound",
+    "sounds": [
+      "chiikawacraft:usagi_hurt_sound"
+    ]
+  },
+  "entity_usagi_idle": {
+    "subtitle": "sounds.chiikawacraft.usagi_idle_sound",
+    "sounds": [
+      "chiikawacraft:usagi_idle_sound"
+    ]
+  }
+}

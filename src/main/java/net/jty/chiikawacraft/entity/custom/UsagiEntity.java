@@ -1,5 +1,6 @@
 package net.jty.chiikawacraft.entity.custom;
 
+import net.jty.chiikawacraft.sound.ModSounds;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.AnimalEntity;
@@ -17,18 +18,18 @@ public class UsagiEntity extends ChiikawaEntity {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_PARROT_AMBIENT;
+        return ModSounds.ENTITY_USAGI_IDLE;
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_ALLAY_HURT;
+        return ModSounds.ENTITY_USAGI_HURT;
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_PANDA_DEATH;
+        return ModSounds.ENTITY_USAGI_DEATH;
     }
 }

@@ -18,6 +18,7 @@ import net.jty.chiikawacraft.item.ModItemGroups;
 import net.jty.chiikawacraft.item.ModItems;
 import net.jty.chiikawacraft.item.custom.ModArmorItem;
 import net.jty.chiikawacraft.screen.ModScreenHandlers;
+import net.jty.chiikawacraft.sound.ModSounds;
 import net.jty.chiikawacraft.util.YoroiDeath;
 import net.jty.chiikawacraft.world.gen.ModWorldGeneration;
 import net.jty.chiikawacraft.screen.custom.PedestalScreen;
@@ -58,6 +59,8 @@ public class ChiikawaCraft implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 		ModEntities.registerModEntities();
 		ModDamageTypes.registerModDamageTypes();
+		ModSounds.registerSounds();
+
 		BlockEntityRendererFactories.register(ModBlockEntities.PEDESTAL_BE, PedestalBlockEntityRenderer::new);
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CHIIKAWA, ChiikawaEntity.createAttributes());
