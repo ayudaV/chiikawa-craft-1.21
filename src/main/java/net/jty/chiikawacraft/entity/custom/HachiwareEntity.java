@@ -5,28 +5,35 @@ import net.jty.chiikawacraft.item.ModItems;
 import net.jty.chiikawacraft.sound.ModSounds;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class HachiwareEntity extends ChiikawaEntity {
-    public HachiwareEntity(EntityType<? extends ChiikawaEntity> entityType, World world) {
+public class HachiwareEntity extends AbstractChiikawaEntity {
+    public HachiwareEntity(EntityType<? extends AbstractChiikawaEntity> entityType, World world) {
         super(entityType, world);
     }
+
     @Override
     public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.HACHIWARE.create(world);
     }
+
     @Override
     public ItemStack getBasketItem() {
         return ModItems.HACHIWARE_BASKET.getDefaultStack();
     }
+
     /* SOUNDS */
     @Nullable
     @Override

@@ -36,7 +36,6 @@ public interface Catchable {
 
     SoundEvent getBasketFillSound();
 
-    @Deprecated
     static void copyDataToStack(MobEntity entity, ItemStack stack) {
         stack.set(DataComponentTypes.CUSTOM_NAME, entity.getCustomName());
         NbtComponent.set(DataComponentTypes.BUCKET_ENTITY_DATA, stack, nbtCompound -> {
@@ -59,7 +58,6 @@ public interface Catchable {
         });
     }
 
-    @Deprecated
     static void copyDataFromNbt(MobEntity entity, NbtCompound nbt) {
         if (nbt.contains("NoAI")) {
             entity.setAiDisabled(nbt.getBoolean("NoAI"));

@@ -15,8 +15,8 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class UsagiEntity extends ChiikawaEntity {
-    public UsagiEntity(EntityType<? extends ChiikawaEntity> entityType, World world) {
+public class UsagiEntity extends AbstractChiikawaEntity {
+    public UsagiEntity(EntityType<? extends AbstractChiikawaEntity> entityType, World world) {
         super(entityType, world);
     }
 
