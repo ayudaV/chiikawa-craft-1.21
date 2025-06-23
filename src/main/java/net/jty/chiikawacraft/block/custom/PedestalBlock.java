@@ -1,9 +1,12 @@
 package net.jty.chiikawacraft.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.jty.chiikawacraft.block.entity.ModBlockEntities;
 import net.jty.chiikawacraft.block.entity.custom.PedestalBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
@@ -85,5 +88,15 @@ public class PedestalBlock extends BlockWithEntity implements BlockEntityProvide
         }
 
         return ItemActionResult.SUCCESS;
+    }
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        if(world.isClient()) {
+            return null;
+        }
+
+        return validateTicker(type, ModBlockEntities.PEDESTAL_BE,
+                (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
 }

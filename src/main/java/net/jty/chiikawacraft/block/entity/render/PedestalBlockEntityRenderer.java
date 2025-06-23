@@ -1,12 +1,14 @@
-package net.jty.chiikawacraft.block.entity.renderer;
+package net.jty.chiikawacraft.block.entity.render;
 
 import net.jty.chiikawacraft.block.entity.custom.PedestalBlockEntity;
+import net.jty.chiikawacraft.entity.custom.ChiikawaEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
+import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
@@ -22,8 +24,7 @@ public class PedestalBlockEntityRenderer implements BlockEntityRenderer<Pedestal
     }
 
     @Override
-    public void render(PedestalBlockEntity entity, float tickDelta, MatrixStack matrices,
-                       VertexConsumerProvider vertexConsumers, int light, int overlay) {
+    public void render(PedestalBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         ItemStack stack = entity.getStack(0);
 

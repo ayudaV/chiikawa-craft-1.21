@@ -41,6 +41,8 @@ public class ModItemGroups {
                         entries.add(ModItems.FLOUR);
                         entries.add(ModItems.BASKET);
                         entries.add(ModItems.CHIIKAWA_BASKET);
+                        entries.add(ModItems.HACHIWARE_BASKET);
+                        entries.add(ModItems.USAGI_BASKET);
                     }))
                     .build());
 
@@ -50,7 +52,6 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.chiikawacraft.chiikawacraft_blocks"))
                     .entries(((displayContext, entries) -> {
                         entries.add(ModBlocks.PEDESTAL);
-                        entries.add(ModBlocks.SEED_CRUSHER);
                     }))
                     .build());
 

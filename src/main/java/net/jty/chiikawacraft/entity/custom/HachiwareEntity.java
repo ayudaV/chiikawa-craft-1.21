@@ -1,12 +1,14 @@
 package net.jty.chiikawacraft.entity.custom;
 
 import net.jty.chiikawacraft.entity.ModEntities;
+import net.jty.chiikawacraft.item.ModItems;
 import net.jty.chiikawacraft.sound.ModSounds;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -20,6 +22,10 @@ public class HachiwareEntity extends ChiikawaEntity {
     @Override
     public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.HACHIWARE.create(world);
+    }
+    @Override
+    public ItemStack getBasketItem() {
+        return ModItems.HACHIWARE_BASKET.getDefaultStack();
     }
     /* SOUNDS */
     @Nullable

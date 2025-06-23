@@ -4,7 +4,6 @@ import net.jty.chiikawacraft.entity.ModEntities;
 import net.jty.chiikawacraft.item.ModItems;
 import net.jty.chiikawacraft.sound.ModSounds;
 import net.minecraft.advancement.criterion.Criteria;
-import net.minecraft.entity.Bucketable;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
@@ -37,7 +36,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 
-public class ChiikawaEntity extends AnimalEntity implements Bucketable {
+public class ChiikawaEntity extends AnimalEntity implements Catchable {
     public final AnimationState idleAnimationState = new AnimationState();
     private  int idleAnimationTimeout = 0;
     private static final TrackedData<Boolean> FROM_BUCKET = DataTracker.registerData(ChiikawaEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
@@ -82,25 +81,9 @@ public class ChiikawaEntity extends AnimalEntity implements Bucketable {
 
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
-        return Bucketable.tryBucket(player, hand, this).orElse(super.interactMob(player, hand));
+        return Catchable.tryCatch(player, hand, this).orElse(super.interactMob(player, hand));
     }
-    public static <T extends LivingEntity> Optional<ActionResult> tryCatch(PlayerEntity player, Hand hand, T entity) {
-        ItemStack itemStack = player.getStackInHand(hand);
-        if (itemStack.getItem() == Items.WATER_BUCKET && entity.isAlive()) {
-            entity.playSound(((Bucketable)((Object)entity)).getBucketFillSound(), 1.0f, 1.0f);
-            ItemStack itemStack2 = ((Bucketable)((Object)entity)).getBucketItem();
-            ((Bucketable)((Object)entity)).copyDataToStack(itemStack2);
-            ItemStack itemStack3 = ItemUsage.exchangeStack(itemStack, player, itemStack2, false);
-            player.setStackInHand(hand, itemStack3);
-            World world = entity.getWorld();
-            if (!world.isClient) {
-                Criteria.FILLED_BUCKET.trigger((ServerPlayerEntity)player, itemStack2);
-            }
-            entity.discard();
-            return Optional.of(ActionResult.success(world.isClient));
-        }
-        return Optional.empty();
-    }
+
 
     @Override
     public void tick() {
@@ -142,48 +125,48 @@ public class ChiikawaEntity extends AnimalEntity implements Bucketable {
     }
 
     @Override
-    public boolean isFromBucket() {
+    public boolean isFromBasket() {
         return this.dataTracker.get(FROM_BUCKET);
     }
 
     @Override
-    public void setFromBucket(boolean fromBucket) {
-        this.dataTracker.set(FROM_BUCKET, fromBucket);
+    public void setFromBasket(boolean fromBasket) {
+        this.dataTracker.set(FROM_BUCKET, fromBasket);
     }
 
 
     @Override
     public void copyDataToStack(ItemStack stack) {
-        Bucketable.copyDataToStack(this, stack);
+        Catchable.copyDataToStack(this, stack);
     }
 
 
     @Override
     public void copyDataFromNbt(NbtCompound nbt) {
-        Bucketable.copyDataFromNbt(this, nbt);
+        Catchable.copyDataFromNbt(this, nbt);
     }
 
 
     @Override
     public void writeCustomDataToNbt(NbtCompound nbt) {
         super.writeCustomDataToNbt(nbt);
-        nbt.putBoolean("FromBucket", this.isFromBucket());
+        nbt.putBoolean("FromBasket", this.isFromBasket());
     }
 
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
-        this.setFromBucket(nbt.getBoolean("FromBucket"));
+        this.setFromBasket(nbt.getBoolean("FromBasket"));
     }
 
 
     @Override
-    public ItemStack getBucketItem() {
-        return ModItems.CHIIKAWA_SPAWN_EGG.getDefaultStack();
+    public ItemStack getBasketItem() {
+        return ModItems.CHIIKAWA_BASKET.getDefaultStack();
     }
 
     @Override
-    public SoundEvent getBucketFillSound() {
+    public SoundEvent getBasketFillSound() {
         return SoundEvents.ITEM_BUCKET_FILL_FISH;
     }
 

@@ -4,12 +4,15 @@ package net.jty.chiikawacraft.block.entity.custom;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.jty.chiikawacraft.block.entity.ImplementedInventory;
 import net.jty.chiikawacraft.block.entity.ModBlockEntities;
+import net.jty.chiikawacraft.item.custom.EntityBasketItem;
 import net.jty.chiikawacraft.screen.custom.PedestalScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.item.EntityBucketItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
@@ -21,14 +24,23 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class PedestalBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory<BlockPos> {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
     private float rotation = 0;
+    private float speed = 0.5f;
 
     public PedestalBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.PEDESTAL_BE, pos, state);
+    }
+
+    public void tick(World world, BlockPos pos, BlockState state) {
+        Item item = inventory.getFirst().getItem();
+        if (item instanceof EntityBasketItem basketItem) {
+            speed += 0.1f;
+        }
     }
 
     @Override
@@ -37,7 +49,7 @@ public class PedestalBlockEntity extends BlockEntity implements ImplementedInven
     }
 
     public float getRenderingRotation() {
-        rotation += 0.5f;
+        rotation += speed;
         if(rotation >= 360) {
             rotation = 0;
         }

@@ -13,7 +13,6 @@ import net.jty.chiikawacraft.entity.client.usagi.UsagiRenderer;
 import net.jty.chiikawacraft.entity.client.yoroi.YoroiModel;
 import net.jty.chiikawacraft.entity.client.yoroi.YoroiRenderer;
 import net.jty.chiikawacraft.screen.ModScreenHandlers;
-import net.jty.chiikawacraft.screen.custom.SeedCrusherScreen;
 import net.jty.chiikawacraft.screen.custom.PedestalScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 
@@ -33,7 +32,6 @@ public class ChiikawaCraftClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.YOROI, YoroiRenderer::new);
 
         HandledScreens.register(ModScreenHandlers.PEDESTAL_SCREEN_HANDLER, PedestalScreen::new);
-        HandledScreens.register(ModScreenHandlers.SEED_CRUSHER_SCREEN_HANDLER, SeedCrusherScreen::new);
 
 
     }

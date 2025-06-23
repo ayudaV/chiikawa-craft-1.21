@@ -4,6 +4,8 @@
 package net.jty.chiikawacraft.entity.custom;
 
 import java.util.Optional;
+
+import net.jty.chiikawacraft.item.ModItems;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.NbtComponent;
@@ -79,9 +81,9 @@ public interface Catchable {
         }
     }
 
-    static <T extends LivingEntity> Optional<ActionResult> tryBasket(PlayerEntity player, Hand hand, T entity) {
+    public static <T extends LivingEntity> Optional<ActionResult> tryCatch(PlayerEntity player, Hand hand, T entity) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if (itemStack.getItem() == Items.WATER_BUCKET && entity.isAlive()) {
+        if (itemStack.getItem() == ModItems.BASKET && entity.isAlive()) {
             entity.playSound(((Catchable)((Object)entity)).getBasketFillSound(), 1.0f, 1.0f);
             ItemStack itemStack2 = ((Catchable)((Object)entity)).getBasketItem();
             ((Catchable)((Object)entity)).copyDataToStack(itemStack2);

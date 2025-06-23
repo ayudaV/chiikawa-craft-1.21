@@ -24,7 +24,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LIVING_GEM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LIVING_GEM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LIVING_GEM_DEEPSLATE_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SEED_CRUSHER);
     }
 
     @Override
@@ -35,6 +34,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FLOUR, Models.GENERATED);
         itemModelGenerator.register(ModItems.BASKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHIIKAWA_BASKET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HACHIWARE_BASKET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.USAGI_BASKET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.CHIIKAWA_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.HACHIWARE_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));

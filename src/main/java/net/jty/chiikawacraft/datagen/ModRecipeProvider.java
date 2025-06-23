@@ -31,21 +31,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.LIVING_GEM, RecipeCategory.DECORATIONS, ModBlocks.LIVING_GEM_BLOCK);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LIVING_GEM_BLOCK)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .input('R', ModItems.RAW_LIVING_GEM)
-                .criterion(hasItem(ModItems.RAW_LIVING_GEM), conditionsFromItem(ModItems.RAW_LIVING_GEM))
-                .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "living_gem_block_from_raw_living_gem"));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IRON_YOROI_HELMET)
                 .pattern("III")
                 .pattern("ILI")
                 .pattern("   ")
                 .input('L', ModItems.LIVING_GEM)
                 .input('I', Items.IRON_INGOT)
-                .criterion(hasItem(ModItems.LIVING_GEM), conditionsFromItem(ModItems.LIVING_GEM))
+                .criterion(hasItem(ModItems.LIVING_GEM), conditionsFromItem(ModItems.IRON_YOROI_HELMET))
                 .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "iron_yoroi_helmet"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GOLD_YOROI_HELMET)
@@ -54,7 +46,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("   ")
                 .input('L', ModItems.LIVING_GEM)
                 .input('G', Items.GOLD_INGOT)
-                .criterion(hasItem(ModItems.LIVING_GEM), conditionsFromItem(ModItems.LIVING_GEM))
+                .criterion(hasItem(ModItems.LIVING_GEM), conditionsFromItem(ModItems.GOLD_YOROI_HELMET))
                 .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "gold_yoroi_helmet"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PANCAKE)
@@ -64,7 +56,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('F', ModItems.FLOUR)
                 .input('E', Items.EGG)
                 .input('H', Items.HONEY_BOTTLE)
-                .criterion(hasItem(ModItems.FLOUR), conditionsFromItem(ModItems.FLOUR))
+                .criterion(hasItem(ModItems.FLOUR), conditionsFromItem(ModItems.PANCAKE))
                 .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "pancake"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FLOUR)
+                .pattern("W  ")
+                .pattern("   ")
+                .pattern("   ")
+                .input('W', Items.WHEAT)
+                .criterion(hasItem(Items.WHEAT), conditionsFromItem(ModItems.FLOUR))
+                .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "flour"));
     }
 }
