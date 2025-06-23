@@ -14,6 +14,11 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+/**
+ * Represents the YoroiEntity, a custom Iron Golem entity with unique attributes and behaviors.
+ * This entity contains an idle animation state and custom animation logic triggered on client-side.
+ * It extends the IronGolemEntity class and overrides certain methods for custom functionality.
+ */
 public class YoroiEntity extends IronGolemEntity {
     public final AnimationState idleAnimationState = new AnimationState();
     private  int idleAnimationTimeout = 0;

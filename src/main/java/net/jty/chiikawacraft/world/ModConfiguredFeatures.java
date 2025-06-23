@@ -18,6 +18,27 @@ import net.minecraft.registry.tag.BlockTags;
 
 import java.util.List;
 
+/**
+ * The {@code ModConfiguredFeatures} class is responsible for defining and registering
+ * custom configured features used in the ChiikawaCraft mod. Configured features are
+ * specific feature instances with defined parameters or configurations for use in
+ * world generation.
+ *
+ * Key functionalities of this class:
+ *
+ * - Provides registry keys for custom features to ensure uniqueness and proper identification.
+ * - Sets up configurations for ore generation features, such as the placement and size of custom ores.
+ * - Manages the registration of configured features into the game using the provided context.
+ *
+ * The primary focus of this class is to support the implementation of world generation
+ * for the custom "Living Gem" ore. It defines:
+ *
+ * - Replacement rules for the blocks where the custom ore can generate (e.g., stone or deepslate).
+ * - Registration of the configured feature with its associated feature type, targets, and other parameters.
+ *
+ * This class is typically used in conjunction with placement modifiers (defined in other classes)
+ * to control both the placement and frequency of custom feature generation in the game world.
+ */
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> LIVING_GEM_ORE_KEY = registerKey("living_gem_ore");
 

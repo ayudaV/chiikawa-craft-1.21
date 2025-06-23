@@ -16,6 +16,24 @@ import net.minecraft.util.Identifier;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * ModRecipeProvider is a custom recipe provider that extends FabricRecipeProvider
+ * to define and register crafting, smelting, blasting, and stonecutting recipes in
+ * the ChiikawaCraft mod. This class is responsible for handling the generation of
+ * recipe data for the mod's custom items and blocks.
+ *
+ * Responsibilities:
+ * - Register recipes for custom items and blocks, including but not limited
+ *   to smelting, blasting, stonecutting, and custom-shaped crafting recipes.
+ * - Create reversible compacting recipes for block-to-item and item-to-block transformations.
+ * - Define unique recipes for armor, food, and other mod-specific items.
+ *
+ * Methods:
+ * - ModRecipeProvider(FabricDataOutput, CompletableFuture<RegistryWrapper.WrapperLookup>):
+ *   The constructor initializes the recipe provider with the required output and registry lookups.
+ * - generate(RecipeExporter): Overridden method responsible for defining and exporting all
+ *   custom recipes.
+ */
 public class ModRecipeProvider extends FabricRecipeProvider {
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);

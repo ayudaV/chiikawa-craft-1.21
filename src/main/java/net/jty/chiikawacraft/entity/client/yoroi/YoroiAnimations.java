@@ -4,6 +4,20 @@ import net.minecraft.client.render.entity.animation.AnimationHelper;
 import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
+/**
+ * The YoroiAnimations class provides predefined animation sequences
+ * for a Yoroi character. These animations are designed to specify
+ * movement behaviors for various parts of the character's body such as
+ * arms and legs.
+ *
+ * The available animations include:
+ * - ANIM_YOROI_IDLE: Represents an idle stance with minimal movement.
+ * - ANIM_YOROI_WALK: Represents a walking motion with coordinated arm and leg movements.
+ *
+ * Each animation is created using a builder pattern, allowing the definition
+ * of keyframes, transformations, and interpolation methods for specific
+ * bone animations in the character's skeleton.
+ */
 public class YoroiAnimations {
 
     public static final Animation ANIM_YOROI_IDLE = Animation.Builder.create(1f).looping()

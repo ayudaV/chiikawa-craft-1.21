@@ -11,6 +11,28 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+/**
+ * The ModEntities class is responsible for registering and maintaining references
+ * to the custom entities introduced by the ChiikawaCraft mod. Each custom entity
+ * is registered with its unique identifier, spawn group, and specific dimensions.
+ *
+ * Entities Registered:
+ * - ChiikawaEntity: Represents a friendly creature associated with the ChiikawaCraft mod.
+ * - HachiwareEntity: Represents another variant of the Chiikawa-themed creature.
+ * - UsagiEntity: Represents a rabbit-themed creature within the mod.
+ * - YoroiEntity: Represents a durable, armored entity with unique attributes.
+ *
+ * Responsibilities of this class include:
+ * - Defining and initializing the entity types with their unique properties.
+ * - Registering the entities to the mod's registry for game integration.
+ * - Ensuring the uniqueness of each entity's identifier.
+ *
+ * Known Usage:
+ * Other mod components, such as those responsible for attribute registration
+ * and sound effect handling, rely on the entities initialized here. The
+ * registerModEntities method is called during the initialization phase of the mod
+ * to output logs confirming successful registration.
+ */
 public class ModEntities {
     public static final EntityType<ChiikawaEntity> CHIIKAWA = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(ChiikawaCraft.MOD_ID, "chiikawa_entity"),

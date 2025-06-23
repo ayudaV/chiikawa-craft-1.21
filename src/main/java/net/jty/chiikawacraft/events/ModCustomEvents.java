@@ -13,6 +13,27 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 
+/**
+ * Handles the registration of custom mod events in the ChiikawaCraft mod.
+ * This class is primarily responsible for defining and integrating custom event behaviors
+ * that react to specific game occurrences, such as entity deaths or other server-based actions.
+ *
+ * Features:
+ * - Integration with server-side events via the Fabric API, ensuring mod-specific behavior
+ *   reacts appropriately to game events.
+ * - Implementation of event-driven logic for player actions and interactions.
+ * - Custom behavior when a player entity meets specific conditions (e.g., wearing specific
+ *   armor pieces).
+ *
+ * Key Event:
+ * - The `ServerLivingEntityEvents.ALLOW_DEATH` event is overridden to allow custom behaviors
+ *   when player entities are wearing a predefined set of armor, defined in the mod.
+ *   The conditions and outcomes include:
+ *   - Detecting if the player is equipped with specific armor (e.g., Iron Yoroi Helmet).
+ *   - Sending a message to the player upon meeting the conditions.
+ *   - Spawning a custom mod-specific entity (e.g., Yoroi) under specific conditions.
+ *   - Decreasing the durability or removing affected armor items post-event.
+ */
 public class ModCustomEvents {
     public static void registerModEvents() {
         ChiikawaCraft.LOGGER.info("Registering Mod Events for: " + ChiikawaCraft.MOD_ID);

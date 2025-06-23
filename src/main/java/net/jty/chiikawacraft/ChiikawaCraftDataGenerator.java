@@ -10,6 +10,28 @@ import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 
+/**
+ * The ChiikawaCraftDataGenerator class is responsible for managing the data generation
+ * process for the ChiikawaCraft mod. This includes initializing and configuring various
+ * data providers such as block tags, item tags, loot tables, models, and recipes.
+ * Additionally, it registers mod-specific configured and placed features in the Minecraft
+ * registry.
+ *
+ * This class implements the {@code DataGeneratorEntrypoint} interface to hook into the
+ * data generation process of the Fabric API and ensures all relevant data is generated
+ * according to the mod's requirements.
+ *
+ * Methods:
+ * - {@code onInitializeDataGenerator}: Initializes the Fabric data generator, creating
+ *   a data pack and adding all necessary providers to generate mod data such as block
+ *   tags, item tags, loot tables, models, and recipes.
+ * - {@code buildRegistry}: Registers configured and placed features for the mod using
+ *   the provided {@code RegistryBuilder} instance.
+ *
+ * Responsibilities:
+ * - Invoking all providers required to generate data specific to the ChiikawaCraft mod.
+ * - Registering mod-specific features into the appropriate registries.
+ */
 public class ChiikawaCraftDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {

@@ -10,6 +10,33 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+/**
+ * The {@code ModItemGroups} class is responsible for registering custom item groups for the
+ * ChiikawaCraft mod. These item groups allow better categorization and organization of
+ * mod-related items within the game, providing a dedicated section in the creative inventory
+ * for players to access mod-specific items and blocks.
+ *
+ * This class defines and registers two item groups:
+ * <ul>
+ * - {@code LIVING_GEM_ITEMS_GROUP}: Contains items and blocks related to living gems, such as ores,
+ *   blocks, and helmets.
+ * - {@code CHIIKAWACRAFT_ITEMS_GROUP}: Includes other mod-specific items like spawn eggs,
+ *   consumables, and custom baskets.
+ *
+ * Each item group is initialized with:
+ * - A custom group identifier using the mod's namespace.
+ * - An icon representing the group, typically a related item from the mod.
+ * - A localized display name for user-friendly naming in the game's interface.
+ * - Predefined entries, which list the items and blocks that belong to the group, using
+ *   a lambda to add them dynamically at runtime.
+ *
+ * Responsibilities of this class:
+ * - Ensure the proper registration of all item groups into the Minecraft item registry.
+ * - Log the item group registration process for debugging and tracking purposes.
+ *
+ * The {@link #registerItemGroups()} method must be called during the mod initialization phase
+ * to add the item groups to the game successfully.
+ */
 public class ModItemGroups {
 
     public static final ItemGroup LIVING_GEM_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,

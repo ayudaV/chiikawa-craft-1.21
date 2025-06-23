@@ -23,6 +23,11 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
+/**
+ * The Catchable interface defines behavior for entities that can be caught and placed into a basket.
+ * It provides methods for managing entity data transfer to and from item stacks and NBT,
+ * as well as handling custom actions when entities are caught.
+ */
 public interface Catchable {
     boolean isFromBasket();
 
@@ -47,9 +52,6 @@ public interface Catchable {
             }
             if (entity.hasNoGravity()) {
                 nbtCompound.putBoolean("NoGravity", entity.hasNoGravity());
-            }
-            if (entity.isGlowingLocal()) {
-                nbtCompound.putBoolean("Glowing", entity.isGlowingLocal());
             }
             if (entity.isInvulnerable()) {
                 nbtCompound.putBoolean("Invulnerable", entity.isInvulnerable());
@@ -79,12 +81,12 @@ public interface Catchable {
         }
     }
 
-    public static <T extends LivingEntity> Optional<ActionResult> tryCatch(PlayerEntity player, Hand hand, T entity) {
+    static <T extends LivingEntity> Optional<ActionResult> tryCatch(PlayerEntity player, Hand hand, T entity) {
         ItemStack itemStack = player.getStackInHand(hand);
         if (itemStack.getItem() == ModItems.BASKET && entity.isAlive()) {
-            entity.playSound(((Catchable)((Object)entity)).getBasketFillSound(), 1.0f, 1.0f);
-            ItemStack itemStack2 = ((Catchable)((Object)entity)).getBasketItem();
-            ((Catchable)((Object)entity)).copyDataToStack(itemStack2);
+            entity.playSound(((Catchable) entity).getBasketFillSound(), 1.0f, 1.0f);
+            ItemStack itemStack2 = ((Catchable) entity).getBasketItem();
+            ((Catchable) entity).copyDataToStack(itemStack2);
             ItemStack itemStack3 = ItemUsage.exchangeStack(itemStack, player, itemStack2, false);
             player.setStackInHand(hand, itemStack3);
             World world = entity.getWorld();

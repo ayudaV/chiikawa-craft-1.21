@@ -19,6 +19,40 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+/**
+ * The HachiwareEntity class represents a specific type of Chiikawa-themed entity
+ * introduced in the mod, extending the functionality of the AbstractChiikawaEntity base class.
+ * This class defines unique behaviors, sounds, and interactions for the Hachiware entity.
+ *
+ * Key Features:
+ * 1. Child Creation:
+ *    Overrides the createChild method to ensure Hachiware entities reproduce
+ *    to spawn another Hachiware instance.
+ *
+ * 2. Custom Basket Item:
+ *    Specifies a unique basket item type associated with the Hachiware entity
+ *    via the getBasketItem method.
+ *
+ * 3. Sound Customization:
+ *    Defines specific ambient, hurt, and death sounds for the Hachiware entity
+ *    by overriding the respective sound-related methods.
+ *
+ * Inherits Attributes and Behaviors:
+ * As a subclass of AbstractChiikawaEntity, this class inherits common attributes
+ * such as movement speed, health, and interaction capabilities. It also benefits
+ * from reusable methods and goals declared in the abstract parent class, including:
+ * - Animation handling.
+ * - Interaction logic for capturing the entity.
+ * - Goals for wandering, mating, and interaction with the player.
+ *
+ * Game Integration:
+ * This entity type is registered in the ModEntities class, ensuring the Hachiware
+ * entity is recognized by the game's ecosystem, including spawning and sound systems.
+ *
+ * Constructor:
+ * The constructor initializes the HachiwareEntity within the game world, assigning
+ * it an EntityType and World instance for proper gameplay integration.
+ */
 public class HachiwareEntity extends AbstractChiikawaEntity {
     public HachiwareEntity(EntityType<? extends AbstractChiikawaEntity> entityType, World world) {
         super(entityType, world);

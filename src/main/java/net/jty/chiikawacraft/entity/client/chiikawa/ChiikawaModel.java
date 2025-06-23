@@ -10,6 +10,19 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
+/**
+ * The ChiikawaModel class is a custom model implementation for the ChiikawaEntity.
+ * This model is designed to define the visual parts and animations of the Chiikawa entity in Minecraft.
+ * It extends the SinglePartEntityModel class and specifies the model's structure and behaviors.
+ *
+ * @param <T> The type parameter extending ChiikawaEntity.
+ *
+ * Features of the model include:
+ * - Nested model parts, including Body, Head, Arms, Legs, and their subcomponents.
+ * - Settable head angles with clamping for better animation control.
+ * - Render method to visualize the model.
+ * - Methods for handling entity animations (walking and idle states).
+ */
 // Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17+ for Yarn,
 // Paste this class into your mod and generate all required imports

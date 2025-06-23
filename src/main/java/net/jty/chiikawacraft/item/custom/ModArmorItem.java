@@ -20,6 +20,53 @@ import net.minecraft.world.World;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The ModArmorItem class is an extension of the ArmorItem class, designed to provide custom behavior
+ * for certain armor materials in a game. This class applies specific status effects to players
+ * who wear a full set of armor made from designated custom materials. The effects, duration, and
+ * amplifier levels vary based on the armor's material type. Additionally, it checks for specific configurations
+ * of armor and can apply corresponding secondary effects or properties.
+ *
+ * Features:
+ * - Maps specific armor materials to associated status effects.
+ * - Ensures that players wearing a full set of custom armor receive matching effects.
+ * - Utilizes a secondary material mapping system for armor validation.
+ * - Periodically evaluates inventory to apply appropriate effects.
+ *
+ * Constructor:
+ * - ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings):
+ *   Initializes the ModArmorItem with the specified material, type, and settings.
+ *
+ * Overrides:
+ * - inventoryTick:
+ *   Called every game tick that the item is in the player's inventory. If the player is wearing
+ *   a complete set of custom armor matching the material map, this method applies the corresponding
+ *   status effects specified in the MATERIAL_TO_EFFECT_MAP.
+ *
+ * Private methods:
+ * - evaluateArmorEffects(PlayerEntity player):
+ *   Iterates through the MATERIAL_TO_EFFECT_MAP and applies the appropriate status effects
+ *   to the player if they are wearing the correct armor.
+ *
+ * - addStatusEffectForMaterial(PlayerEntity player, RegistryEntry<ArmorMaterial> mapArmorMaterial, List<StatusEffectInstance> mapStatusEffect):
+ *   Adds status effects from the specified armor material's effect list to the player, ensuring
+ *   no duplicate effects are applied.
+ *
+ * - hasFullSuitOfArmorOn(PlayerEntity player):
+ *   Checks if the player is wearing a full set of armor by verifying that all armor item slots
+ *   (boots, leggings, chestplate, helmet) are occupied.
+ *
+ * - hasCorrectArmorOn(RegistryEntry<ArmorMaterial> material, PlayerEntity player):
+ *   Validates if the player is wearing armor made from the specified material type and corresponding
+ *   secondary material types.
+ *
+ * Static constants:
+ * - MATERIAL_TO_EFFECT_MAP:
+ *   Defines the mapping of custom armor materials to their associated status effects.
+ *
+ * - SECUNDARY_MATERIAL:
+ *   Maps custom armor materials to secondary materials required for validation during armor checks.
+ */
 public class ModArmorItem extends ArmorItem {
     private static final Map<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>>())

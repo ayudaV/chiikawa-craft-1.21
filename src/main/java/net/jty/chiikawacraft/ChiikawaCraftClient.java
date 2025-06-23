@@ -13,9 +13,14 @@ import net.jty.chiikawacraft.entity.client.usagi.UsagiRenderer;
 import net.jty.chiikawacraft.entity.client.yoroi.YoroiModel;
 import net.jty.chiikawacraft.entity.client.yoroi.YoroiRenderer;
 import net.jty.chiikawacraft.screen.ModScreenHandlers;
-import net.jty.chiikawacraft.screen.custom.PedestalScreen;
+import net.jty.chiikawacraft.screen.custom.HealerScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 
+/**
+ * ChiikawaCraftClient is the main client-side initializer for the ChiikawaCraft mod.
+ * This class is responsible for registering entity models, renderers, and client-side screens.
+ * It implements the ClientModInitializer to ensure proper setup during the client initialization phase.
+ */
 public class ChiikawaCraftClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
@@ -31,7 +36,7 @@ public class ChiikawaCraftClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(YoroiModel.YOROI, YoroiModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.YOROI, YoroiRenderer::new);
 
-        HandledScreens.register(ModScreenHandlers.PEDESTAL_SCREEN_HANDLER, PedestalScreen::new);
+        HandledScreens.register(ModScreenHandlers.HEALER_SCREEN_HANDLER, HealerScreen::new);
 
 
     }

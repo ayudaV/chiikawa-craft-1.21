@@ -24,6 +24,47 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
+/**
+ * The AbstractChiikawaEntity class represents a base entity designed to model Chiikawa-themed
+ * creatures within a mod. It extends the AnimalEntity class and implements the Catchable
+ * interface, making it capable of being interacted with, bred, and caught by the player.
+ *
+ * Core Features:
+ * - Implements custom behaviors for animations, data tracking, and interaction.
+ * - Provides methods to determine if an entity originates from a basket and enable
+ *   data transfer between the entity and item representations.
+ *
+ * Attributes:
+ * - Contains attributes such as health, movement speed, attack damage, and follow range,
+ *   configurable via the createAttributes method.
+ * - Includes an idle animation state with a configurable timeout to control animations.
+ *
+ * Goals:
+ * - Configures several common goals for the entity, such as swimming, mating,
+ *   following parents, interacting with players, and wandering.
+ *
+ * Data Persistence:
+ * - Overrides methods for saving and loading entity data using NBT, ensuring compatibility
+ *   between the entity's state and its item representation.
+ *
+ * Customization and Extension:
+ * - Serves as a parent class for specific Chiikawa entities, delegating details such as
+ *   ambient, hurt, and death sounds to subclasses.
+ * - Requires subclasses to implement the createChild method for breeding functionality,
+ *   allowing the creation of new entities in the game world.
+ *
+ * Interaction and Catching:
+ * - Overrides the interactMob method to integrate catching mechanics using the Catchable
+ *   interface, allowing players to catch these entities with designated items.
+ *
+ * Sound Behavior:
+ * - Abstract methods for retrieving ambient, hurt, and death sounds provide a framework
+ *   for each subclass to define its unique audio cues.
+ *
+ * Animation:
+ * - Includes functionality to control animation states, providing entities with visual feedback
+ *   for idle movements.
+ */
 public abstract class AbstractChiikawaEntity extends AnimalEntity implements Catchable{
     public final AnimationState idleAnimationState = new AnimationState();
     private  int idleAnimationTimeout = 0;

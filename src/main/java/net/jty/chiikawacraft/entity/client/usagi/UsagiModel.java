@@ -9,6 +9,12 @@ import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
+/**
+ * Represents the UsagiModel, a custom entity model for the UsagiEntity in Minecraft.
+ * This class defines the structure and animations for the Usagi entity's appearance in the game.
+ *
+ * @param <T> The generic type extending UsagiEntity.
+ */
 // Made with Blockbench 4.12.5
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports

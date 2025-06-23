@@ -9,6 +9,13 @@ import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
+/**
+ * The YoroiModel class defines a custom entity model for the YoroiEntity in a Minecraft mod.
+ * This class extends SinglePartEntityModel and is used to create, render, and animate a multi-part 3D model.
+ * It works with the associated entity, animations, and textures to display the model with appropriate behavior.
+ *
+ * @param <T> A type that extends YoroiEntity, the specific entity class this model is designed for.
+ */
 // Made with Blockbench 4.12.5
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports

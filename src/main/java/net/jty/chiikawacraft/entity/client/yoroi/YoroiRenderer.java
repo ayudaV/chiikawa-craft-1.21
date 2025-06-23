@@ -8,6 +8,14 @@ import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
+/**
+ * The YoroiRenderer class is responsible for rendering the YoroiEntity in the game.
+ * It extends the MobEntityRenderer and defines custom rendering behavior and textures
+ * for the YoroiEntity.
+ *
+ * This renderer applies custom scaling logic based on whether the entity is a baby or an adult.
+ * It uses a specific texture file to represent the entity visually.
+ */
 public class YoroiRenderer extends MobEntityRenderer<YoroiEntity, YoroiModel<YoroiEntity>> {
     public YoroiRenderer(EntityRendererFactory.Context context) {
         super(context, new YoroiModel<>(context.getPart(YoroiModel.YOROI)), 0.5f);

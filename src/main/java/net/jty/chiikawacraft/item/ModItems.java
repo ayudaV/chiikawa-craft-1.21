@@ -13,6 +13,24 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
+/**
+ * A registry class for defining and handling custom mod items in the ChiikawaCraft mod.
+ * This class contains various item definitions, including general items, spawn eggs,
+ * entity-related baskets, and custom armor pieces.
+ *
+ * The items are registered to the appropriate registries and grouped into relevant
+ * item groups for organization in the game's creative inventory.
+ *
+ * Features:
+ * - General items (e.g., gems, flour, pancake)
+ * - Entity-related baskets with unique functionality
+ * - Spawn eggs for custom mod entities
+ * - Custom armor items with specific material and durability settings
+ *
+ * Methods:
+ * - registerItem: Handles the registration of items with the game registry.
+ * - registerModItems: Registers all items and organizes them into specific item groups.
+ */
 public class ModItems {
     public static final Item LIVING_GEM = registerItem("living_gem", new Item(new Item.Settings()));
     public static final Item RAW_LIVING_GEM = registerItem("raw_living_gem", new Item(new Item.Settings()));

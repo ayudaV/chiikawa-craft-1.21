@@ -15,10 +15,28 @@ import net.jty.chiikawacraft.item.ModItems;
 import net.jty.chiikawacraft.screen.ModScreenHandlers;
 import net.jty.chiikawacraft.sound.ModSounds;
 import net.jty.chiikawacraft.world.gen.ModWorldGeneration;
-import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * The main class for the ChiikawaCraft mod. This class implements the {@link ModInitializer}
+ * interface from the Fabric API to initialize and register all the components of the mod.
+ *
+ * Responsibilities of this class include:
+ * - Setting up the logger for the mod.
+ * - Registering mod-specific features such as items, blocks, entities, and custom events.
+ * - Ensuring world generation and screen handlers are properly initialized.
+ *
+ * The {@code onInitialize()} method is executed during the mod's initialization phase.
+ * It is called when Minecraft and the Fabric environment are ready for mod initialization,
+ * though resources and some other components may still be uninitialized at this stage.
+ *
+ * Key components registered in this mod:
+ * - Custom item groups for organizing items.
+ * - Mod-specific items, blocks, entities, and their attributes.
+ * - Custom damage types and sound events.
+ * - World generation features and screen handlers.
+ */
 public class ChiikawaCraft implements ModInitializer {
 	public static final String MOD_ID = "chiikawacraft";
 

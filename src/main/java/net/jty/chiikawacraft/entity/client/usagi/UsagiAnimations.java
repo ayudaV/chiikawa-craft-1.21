@@ -4,6 +4,16 @@ import net.minecraft.client.render.entity.animation.AnimationHelper;
 import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
+/**
+ * The UsagiAnimations class defines various pre-configured animations for "Usagi" entities.
+ * These animations include keyframe-based transformations for different body parts, such as legs,
+ * arms, head, ears, tail, and body. The animations can represent different states, such as walking
+ * or idling, and are built using an animation builder.
+ *
+ * This class provides static definitions for two animations: ANIM_USAGI_WALK and ANIM_USAGI_IDLE.
+ * Each animation consists of bone-specific transformations which define the movements of the
+ * respective bones over time.
+ */
 public class UsagiAnimations {
 
 
