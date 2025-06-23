@@ -1,10 +1,13 @@
 package net.jty.chiikawacraft.entity.custom;
 
+import net.jty.chiikawacraft.entity.ModEntities;
 import net.jty.chiikawacraft.sound.ModSounds;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
@@ -13,6 +16,10 @@ import org.jetbrains.annotations.Nullable;
 public class HachiwareEntity extends ChiikawaEntity {
     public HachiwareEntity(EntityType<? extends ChiikawaEntity> entityType, World world) {
         super(entityType, world);
+    }
+    @Override
+    public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
+        return ModEntities.HACHIWARE.create(world);
     }
     /* SOUNDS */
     @Nullable

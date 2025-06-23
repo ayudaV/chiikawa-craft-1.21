@@ -14,6 +14,7 @@ import net.jty.chiikawacraft.entity.custom.ChiikawaEntity;
 import net.jty.chiikawacraft.entity.custom.HachiwareEntity;
 import net.jty.chiikawacraft.entity.custom.UsagiEntity;
 import net.jty.chiikawacraft.entity.custom.YoroiEntity;
+import net.jty.chiikawacraft.events.ModCustomEvents;
 import net.jty.chiikawacraft.item.ModItemGroups;
 import net.jty.chiikawacraft.item.ModItems;
 import net.jty.chiikawacraft.item.custom.ModArmorItem;
@@ -33,6 +34,7 @@ import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -60,6 +62,7 @@ public class ChiikawaCraft implements ModInitializer {
 		ModEntities.registerModEntities();
 		ModDamageTypes.registerModDamageTypes();
 		ModSounds.registerSounds();
+		ModCustomEvents.registerModEvents();
 
 		BlockEntityRendererFactories.register(ModBlockEntities.PEDESTAL_BE, PedestalBlockEntityRenderer::new);
 
@@ -71,24 +74,5 @@ public class ChiikawaCraft implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 		ModScreenHandlers.registerScreenHandlers();
 
-		ServerLivingEntityEvents.ALLOW_DEATH.register((entity, damageSource, damageAmount) -> {
-			if (entity instanceof PlayerEntity player) {
-				ItemStack boots = player.getInventory().getArmorStack(0);
-				ItemStack leggings = player.getInventory().getArmorStack(1);
-				ItemStack breastplate = player.getInventory().getArmorStack(2);
-				ItemStack helmet = player.getInventory().getArmorStack(3);
-
-				if (helmet.getItem() == ModItems.IRON_YOROI_HELMET && breastplate.getItem() == Items.IRON_CHESTPLATE
-				&& leggings.getItem() == Items.IRON_LEGGINGS && boots.getItem() == Items.IRON_BOOTS) {
-					player.sendMessage(Text.literal("Summoning by the mind control of Chiikawa's"));
-					helmet.decrement(1);
-					breastplate.decrement(1);
-					leggings.decrement(1);
-					boots.decrement(1);
-					ModEntities.YOROI.spawn(player.getServer().getOverworld().toServerWorld(), BlockPos.ofFloored(player.getPos()), SpawnReason.CONVERSION);
-				}
-			}
-            return true;
-        });
 	}
 }

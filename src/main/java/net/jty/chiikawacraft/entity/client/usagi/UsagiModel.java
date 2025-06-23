@@ -25,21 +25,22 @@ public class UsagiModel<T extends UsagiEntity> extends SinglePartEntityModel<T> 
         this.Head = this.Usagi.getChild("Head");
         this.Body = this.Usagi.getChild("Body");
     }
+
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
         ModelPartData Usagi = modelPartData.addChild("Usagi", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
 
         ModelPartData Head = Usagi.addChild("Head", ModelPartBuilder.create().uv(0, 0).cuboid(-4.0F, -4.0F, -4.0F, 8.0F, 6.0F, 7.0F, new Dilation(0.0F))
-                .uv(0, 13).cuboid(-3.0F, -5.0F, -3.0F, 6.0F, 1.0F, 5.0F, new Dilation(0.0F))
-                .uv(20, 19).cuboid(-5.0F, -3.0F, -3.0F, 1.0F, 4.0F, 5.0F, new Dilation(0.0F))
-                .uv(0, 26).cuboid(4.0F, -3.0F, -3.0F, 1.0F, 4.0F, 5.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -7.0F, 0.0F));
+                .uv(0, 0).cuboid(-3.0F, -5.0F, -3.0F, 6.0F, 1.0F, 5.0F, new Dilation(0.0F))
+                .uv(0, 11).cuboid(-5.0F, -3.0F, -3.0F, 1.0F, 4.0F, 5.0F, new Dilation(0.0F))
+                .uv(10, 11).cuboid(4.0F, -3.0F, -3.0F, 1.0F, 4.0F, 5.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -7.0F, 0.0F));
 
-        ModelPartData EarL = Head.addChild("EarL", ModelPartBuilder.create().uv(21, 29).cuboid(-1.02F, -6.0F, -1.0F, 2.0F, 6.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(2.0F, -4.0F, 0.0F));
+        ModelPartData EarL = Head.addChild("EarL", ModelPartBuilder.create().uv(11, 20).cuboid(-1.02F, -6.0F, -1.0F, 2.0F, 6.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(2.0F, -4.0F, 0.0F));
 
-        ModelPartData EarR = Head.addChild("EarR", ModelPartBuilder.create().uv(13, 27).cuboid(-0.98F, -6.0F, -1.0F, 2.0F, 6.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-2.0F, -4.0F, 0.0F));
+        ModelPartData EarR = Head.addChild("EarR", ModelPartBuilder.create().uv(5, 20).cuboid(-0.98F, -6.0F, -1.0F, 2.0F, 6.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-2.0F, -4.0F, 0.0F));
 
-        ModelPartData Body = Usagi.addChild("Body", ModelPartBuilder.create().uv(0, 19).cuboid(-3.0F, -3.0F, -2.0F, 6.0F, 3.0F, 4.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -2.0F, 0.0F));
+        ModelPartData Body = Usagi.addChild("Body", ModelPartBuilder.create().uv(1, 13).cuboid(-3.0F, -3.0F, -2.0F, 6.0F, 3.0F, 4.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -2.0F, 0.0F));
 
         ModelPartData Tail = Body.addChild("Tail", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
@@ -47,15 +48,15 @@ public class UsagiModel<T extends UsagiEntity> extends SinglePartEntityModel<T> 
 
         ModelPartData Arms = Body.addChild("Arms", ModelPartBuilder.create(), ModelTransform.pivot(4.0F, -3.0F, 0.0F));
 
-        ModelPartData ArmR = Arms.addChild("ArmR", ModelPartBuilder.create().uv(30, 3).cuboid(0.0F, 0.0F, -1.0F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-8.0F, 0.0F, 0.0F));
+        ModelPartData ArmR = Arms.addChild("ArmR", ModelPartBuilder.create().uv(3, 4).cuboid(0.0F, 0.0F, -1.0F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-8.0F, 0.0F, 0.0F));
 
-        ModelPartData ArmL = Arms.addChild("ArmL", ModelPartBuilder.create().uv(30, 6).cuboid(-1.0F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, -0.5F));
+        ModelPartData ArmL = Arms.addChild("ArmL", ModelPartBuilder.create().uv(23, 4).cuboid(-1.0F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, -0.5F));
 
         ModelPartData Legs = Usagi.addChild("Legs", ModelPartBuilder.create(), ModelTransform.pivot(2.0F, -2.0F, 0.0F));
 
-        ModelPartData LegR = Legs.addChild("LegR", ModelPartBuilder.create().uv(28, 28).cuboid(0.0F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-4.0F, 0.0F, 0.0F));
+        ModelPartData LegR = Legs.addChild("LegR", ModelPartBuilder.create().uv(1, 13).cuboid(0.0F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-4.0F, 0.0F, 0.0F));
 
-        ModelPartData LegL = Legs.addChild("LegL", ModelPartBuilder.create().uv(30, 0).cuboid(-1.0F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+        ModelPartData LegL = Legs.addChild("LegL", ModelPartBuilder.create().uv(17, 13).cuboid(-1.0F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
         return TexturedModelData.of(modelData, 32, 32);
     }
 

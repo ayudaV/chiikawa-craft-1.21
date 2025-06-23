@@ -45,7 +45,7 @@ public class YoroiModel<T extends YoroiEntity> extends SinglePartEntityModel<T> 
 
         ModelPartData cube_r5 = Body.addChild("cube_r5", ModelPartBuilder.create().uv(0, 48).cuboid(-4.0F, 0.0F, 0.0F, 8.0F, 8.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -14.0F, 2.0F, 0.1745F, 0.0F, 0.0F));
 
-        ModelPartData Head = Yoroi.addChild("Head", ModelPartBuilder.create().uv(0, 0).cuboid(-4.0F, -32.0F, -4.0F, 8.0F, 8.0F, 8.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+        ModelPartData Head = Yoroi.addChild("Head", ModelPartBuilder.create().uv(0, 0).cuboid(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -24.0F, 0.0F));
 
         ModelPartData LeftArm = Yoroi.addChild("LeftArm", ModelPartBuilder.create().uv(32, 36).cuboid(0.0F, -1.0F, -2.0F, 4.0F, 11.0F, 4.0F, new Dilation(0.0F)), ModelTransform.pivot(4.0F, -22.0F, 0.0F));
 

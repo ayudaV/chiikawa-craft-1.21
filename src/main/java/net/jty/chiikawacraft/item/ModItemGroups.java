@@ -38,6 +38,9 @@ public class ModItemGroups {
                         entries.add(ModItems.USAGI_SPAWN_EGG);
                         entries.add(ModItems.YOROI_SPAWN_EGG);
                         entries.add(ModItems.PANCAKE);
+                        entries.add(ModItems.FLOUR);
+                        entries.add(ModItems.BASKET);
+                        entries.add(ModItems.CHIIKAWA_BASKET);
                     }))
                     .build());
 
@@ -47,6 +50,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.chiikawacraft.chiikawacraft_blocks"))
                     .entries(((displayContext, entries) -> {
                         entries.add(ModBlocks.PEDESTAL);
+                        entries.add(ModBlocks.SEED_CRUSHER);
                     }))
                     .build());
 

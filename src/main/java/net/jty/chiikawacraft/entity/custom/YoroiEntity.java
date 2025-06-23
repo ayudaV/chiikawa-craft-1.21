@@ -1,34 +1,48 @@
 package net.jty.chiikawacraft.entity.custom;
 
+import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class YoroiEntity extends ChiikawaEntity {
-    public YoroiEntity(EntityType<? extends ChiikawaEntity> entityType, World world) {
+public class YoroiEntity extends IronGolemEntity {
+    public final AnimationState idleAnimationState = new AnimationState();
+    private  int idleAnimationTimeout = 0;
+
+    public YoroiEntity(EntityType<? extends IronGolemEntity> entityType, World world) {
         super(entityType, world);
     }
-    /* SOUNDS */
-    @Nullable
-    @Override
-    protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_PARROT_AMBIENT;
+    public static DefaultAttributeContainer.Builder createAttributes() {
+        return MobEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 30)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 4)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 40);
+    }
+    private void setupAnimationStates() {
+        if (this.idleAnimationTimeout <= 0) {
+            this.idleAnimationTimeout = 40;
+            this.idleAnimationState.start(this.age);
+        } else {
+            --this.idleAnimationTimeout;
+        }
     }
 
-    @Nullable
     @Override
-    protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_ALLAY_HURT;
-    }
+    public void tick() {
+        super.tick();
 
-    @Nullable
-    @Override
-    protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_PANDA_DEATH;
+        if (this.getWorld().isClient()) {
+            this.setupAnimationStates();
+        }
     }
 }

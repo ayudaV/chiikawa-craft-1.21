@@ -56,5 +56,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('G', Items.GOLD_INGOT)
                 .criterion(hasItem(ModItems.LIVING_GEM), conditionsFromItem(ModItems.LIVING_GEM))
                 .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "gold_yoroi_helmet"));
-     }
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PANCAKE)
+                .pattern("EF ")
+                .pattern("H  ")
+                .pattern("   ")
+                .input('F', ModItems.FLOUR)
+                .input('E', Items.EGG)
+                .input('H', Items.HONEY_BOTTLE)
+                .criterion(hasItem(ModItems.FLOUR), conditionsFromItem(ModItems.FLOUR))
+                .offerTo(exporter, Identifier.of(ChiikawaCraft.MOD_ID, "pancake"));
+    }
 }

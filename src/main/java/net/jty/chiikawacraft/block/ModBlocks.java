@@ -1,14 +1,13 @@
 package net.jty.chiikawacraft.block;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.jty.chiikawacraft.ChiikawaCraft;
+import net.jty.chiikawacraft.block.custom.SeedCrusherBlock;
 import net.jty.chiikawacraft.block.custom.PedestalBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -31,6 +30,9 @@ public class ModBlocks {
 
     public static final Block PEDESTAL = registerBlock("pedestal",
             new PedestalBlock(AbstractBlock.Settings.create().nonOpaque()));
+
+    public static final Block SEED_CRUSHER = registerBlock("seed_crusher",
+            new SeedCrusherBlock(AbstractBlock.Settings.create()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
