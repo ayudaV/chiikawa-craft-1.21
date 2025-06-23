@@ -25,6 +25,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 /**
+ * AI Generated Documentation
  * The AbstractChiikawaEntity class represents a base entity designed to model Chiikawa-themed
  * creatures within a mod. It extends the AnimalEntity class and implements the Catchable
  * interface, making it capable of being interacted with, bred, and caught by the player.

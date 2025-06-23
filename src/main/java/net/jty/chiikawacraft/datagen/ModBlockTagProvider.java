@@ -9,6 +9,7 @@ import net.minecraft.registry.tag.BlockTags;
 import java.util.concurrent.CompletableFuture;
 
 /**
+ * AI Generated Documentation
  * A data provider class used for generating and assigning block tags for custom blocks
  * in the ChiikawaCraft mod. This class extends Fabric's `FabricTagProvider.BlockTagProvider`
  * to define specific block classifications for custom blocks based on their tool requirements

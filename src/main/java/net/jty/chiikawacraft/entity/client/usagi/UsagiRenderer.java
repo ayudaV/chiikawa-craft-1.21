@@ -9,6 +9,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 /**
+ * AI Generated Documentation
  * Renderer class for the UsagiEntity within the ChiikawaCraft mod. This class is responsible
  * for rendering the UsagiEntity in the game world, applying scaling transformations based
  * on the entity's state, and defining the texture to be used for the entity model.

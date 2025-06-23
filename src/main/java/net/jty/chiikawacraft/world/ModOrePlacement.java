@@ -5,6 +5,7 @@ import net.minecraft.world.gen.placementmodifier.*;
 import java.util.List;
 
 /**
+ * AI Generated Documentation
  * The {@code ModOrePlacement} class provides utility methods for creating and managing
  * placement modifiers that define how ore features are distributed in the game world.
  *

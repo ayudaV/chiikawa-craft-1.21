@@ -10,6 +10,7 @@ import net.minecraft.registry.tag.ItemTags;
 import java.util.concurrent.CompletableFuture;
 
 /**
+ * AI Generated Documentation
  * ModItemTagProvider is a custom implementation of the FabricTagProvider.ItemTagProvider
  * used to define and configure item tags for modded items in a Minecraft mod.
  *

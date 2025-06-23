@@ -14,6 +14,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 /**
+ * AI Generated Documentation
  * A registry class for defining and handling custom mod items in the ChiikawaCraft mod.
  * This class contains various item definitions, including general items, spawn eggs,
  * entity-related baskets, and custom armor pieces.

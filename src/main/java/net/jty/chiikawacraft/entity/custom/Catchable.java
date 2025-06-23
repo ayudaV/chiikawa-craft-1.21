@@ -24,6 +24,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 /**
+ * AI Generated Documentation
  * The Catchable interface defines behavior for entities that can be caught and placed into a basket.
  * It provides methods for managing entity data transfer to and from item stacks and NBT,
  * as well as handling custom actions when entities are caught.

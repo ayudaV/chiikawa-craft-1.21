@@ -9,6 +9,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 /**
+ * AI Generated Documentation
  * ChiikawaRenderer is responsible for rendering the ChiikawaEntity in the game world.
  * This renderer is specifically designed to provide custom visuals and scaling
  * depending on the entity's state.

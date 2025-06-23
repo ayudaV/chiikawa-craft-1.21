@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 /**
+ * AI Generated Documentation
  * ModRecipeProvider is a custom recipe provider that extends FabricRecipeProvider
  * to define and register crafting, smelting, blasting, and stonecutting recipes in
  * the ChiikawaCraft mod. This class is responsible for handling the generation of

@@ -21,6 +21,8 @@ import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
 /**
+ * AI Generated Documentation
+ *
  * EntityBasketItem represents an item that contains an entity of a specific type,
  * allowing the entity to be stored and later released at a specific location in the game world.
  * It is a subclass of the {@code Item} class and provides custom functionality for

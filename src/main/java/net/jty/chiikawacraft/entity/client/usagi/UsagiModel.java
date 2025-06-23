@@ -10,6 +10,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 /**
+ * AI Generated Documentation
  * Represents the UsagiModel, a custom entity model for the UsagiEntity in Minecraft.
  * This class defines the structure and animations for the Usagi entity's appearance in the game.
  *

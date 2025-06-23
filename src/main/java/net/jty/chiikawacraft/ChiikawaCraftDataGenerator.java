@@ -11,6 +11,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 
 /**
+ * AI Generated Documentation
  * The ChiikawaCraftDataGenerator class is responsible for managing the data generation
  * process for the ChiikawaCraft mod. This includes initializing and configuring various
  * data providers such as block tags, item tags, loot tables, models, and recipes.

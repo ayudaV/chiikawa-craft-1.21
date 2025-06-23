@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 import java.util.Optional;
 
 /**
+ * AI Generated Documentation
  * A custom model provider class that extends the FabricModelProvider to handle
  * the generation of block state models and item models for the ChiikawaCraft mod.
  *

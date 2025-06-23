@@ -19,6 +19,7 @@ import net.minecraft.registry.tag.BlockTags;
 import java.util.List;
 
 /**
+ * AI Generated Documentation
  * The {@code ModConfiguredFeatures} class is responsible for defining and registering
  * custom configured features used in the ChiikawaCraft mod. Configured features are
  * specific feature instances with defined parameters or configurations for use in

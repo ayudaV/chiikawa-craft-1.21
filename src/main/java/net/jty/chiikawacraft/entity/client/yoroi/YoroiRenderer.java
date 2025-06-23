@@ -9,6 +9,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 /**
+ * AI Generated Documentation
  * The YoroiRenderer class is responsible for rendering the YoroiEntity in the game.
  * It extends the MobEntityRenderer and defines custom rendering behavior and textures
  * for the YoroiEntity.

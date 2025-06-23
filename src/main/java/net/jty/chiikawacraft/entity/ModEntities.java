@@ -12,6 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 /**
+ * AI Generated Documentation
  * The ModEntities class is responsible for registering and maintaining references
  * to the custom entities introduced by the ChiikawaCraft mod. Each custom entity
  * is registered with its unique identifier, spawn group, and specific dimensions.

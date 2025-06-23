@@ -5,6 +5,7 @@ import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
 /**
+ * AI Generated Documentation
  * The UsagiAnimations class defines various pre-configured animations for "Usagi" entities.
  * These animations include keyframe-based transformations for different body parts, such as legs,
  * arms, head, ears, tail, and body. The animations can represent different states, such as walking

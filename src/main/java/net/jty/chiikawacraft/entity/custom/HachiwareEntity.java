@@ -20,6 +20,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 /**
+ * AI Generated Documentation
  * The HachiwareEntity class represents a specific type of Chiikawa-themed entity
  * introduced in the mod, extending the functionality of the AbstractChiikawaEntity base class.
  * This class defines unique behaviors, sounds, and interactions for the Hachiware entity.

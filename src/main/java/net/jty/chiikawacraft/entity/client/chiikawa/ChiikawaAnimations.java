@@ -6,6 +6,7 @@ import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
 /**
+ * AI Generated Documentation
  * A collection of predefined animations for the Chiikawa character.
  * This class defines various animations such as idle and walking motions,
  * which include transformations and bone animations. These animations can

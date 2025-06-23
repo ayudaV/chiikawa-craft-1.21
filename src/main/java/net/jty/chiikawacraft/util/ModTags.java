@@ -8,6 +8,7 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 /**
+ * AI Generated Documentation
  * The ModTags class defines and organizes custom tags used within the mod.
  * Tags allow grouping of similar elements, such as blocks, for easier reference
  * and management within the game or during data generation.

@@ -17,6 +17,7 @@ import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import java.util.List;
 
 /**
+ * AI Generated Documentation
  * The {@code ModPlacedFeatures} class is responsible for registering and managing
  * custom placed features used in the ChiikawaCraft mod. This includes defining
  * how and where specific features (e.g., ores) are placed in the game world.

@@ -17,6 +17,7 @@ import net.jty.chiikawacraft.screen.custom.HealerScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 
 /**
+ * AI Generated Documentation
  * ChiikawaCraftClient is the main client-side initializer for the ChiikawaCraft mod.
  * This class is responsible for registering entity models, renderers, and client-side screens.
  * It implements the ClientModInitializer to ensure proper setup during the client initialization phase.

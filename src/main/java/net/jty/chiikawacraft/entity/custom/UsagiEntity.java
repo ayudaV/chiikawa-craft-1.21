@@ -16,6 +16,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 /**
+ * AI Generated Documentation
  * Represents the UsagiEntity, a rabbit-themed custom entity in the ChiikawaCraft mod.
  * This class extends the AbstractChiikawaEntity and provides specific functionality
  * and properties unique to the UsagiEntity.

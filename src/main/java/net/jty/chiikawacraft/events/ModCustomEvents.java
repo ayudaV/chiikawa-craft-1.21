@@ -14,6 +14,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 
 /**
+ * AI Generated Documentation
  * Handles the registration of custom mod events in the ChiikawaCraft mod.
  * This class is primarily responsible for defining and integrating custom event behaviors
  * that react to specific game occurrences, such as entity deaths or other server-based actions.

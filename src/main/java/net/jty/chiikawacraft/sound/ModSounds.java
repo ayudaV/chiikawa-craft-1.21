@@ -8,6 +8,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 /**
+ * AI Generated Documentation
  * The ModSounds class is responsible for registering and managing custom sound events
  * used within the ChiikawaCraft mod. It defines a set of sound events corresponding to
  * various entity actions, such as death, hurt, and idle sounds for specific entities.

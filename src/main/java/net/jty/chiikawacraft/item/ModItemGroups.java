@@ -11,6 +11,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 /**
+ * AI Generated Documentation
  * The {@code ModItemGroups} class is responsible for registering custom item groups for the
  * ChiikawaCraft mod. These item groups allow better categorization and organization of
  * mod-related items within the game, providing a dedicated section in the creative inventory

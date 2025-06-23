@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 /**
+ * AI Generated Documentation
  * A utility class for defining and managing custom armor materials in the ChiikawaCraft mod.
  *
  * This class provides methods and predefined constants for registering and handling custom

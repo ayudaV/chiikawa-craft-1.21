@@ -8,6 +8,7 @@ import net.minecraft.registry.RegistryWrapper;
 import java.util.concurrent.CompletableFuture;
 
 /**
+ * AI Generated Documentation
  * The ModRegistryDataGenerator is a subclass of FabricDynamicRegistryProvider
  * designed to generate and register dynamic data for the mod's registry system.
  * This class facilitates the addition of custom configured and placed features

@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * AI Generated Documentation
  * The ModArmorItem class is an extension of the ArmorItem class, designed to provide custom behavior
  * for certain armor materials in a game. This class applies specific status effects to players
  * who wear a full set of armor made from designated custom materials. The effects, duration, and

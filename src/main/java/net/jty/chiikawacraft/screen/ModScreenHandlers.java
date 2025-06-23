@@ -10,6 +10,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 
 /**
+ * AI Generated Documentation
+ * Study only, Not Implemented in final game
  * The ModScreenHandlers class is responsible for registering and managing custom screen handlers
  * for the ChiikawaCraft mod. Screen handlers are used to manage server-side logic for user interfaces
  * and ensure synchronization between the client and server.

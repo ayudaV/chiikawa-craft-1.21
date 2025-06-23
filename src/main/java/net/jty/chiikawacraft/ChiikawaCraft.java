@@ -19,6 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * AI Generated Documentation
  * The main class for the ChiikawaCraft mod. This class implements the {@link ModInitializer}
  * interface from the Fabric API to initialize and register all the components of the mod.
  *

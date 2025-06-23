@@ -9,6 +9,7 @@ import net.minecraft.registry.RegistryWrapper;
 import java.util.concurrent.CompletableFuture;
 
 /**
+ * AI Generated Documentation
  * ModLootTableProvider is a custom loot table provider designed for generating loot
  * tables for blocks in the ChiikawaCraft mod.
  *

@@ -4,17 +4,12 @@ import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
-import net.minecraft.entity.passive.TameableEntity;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 /**
+ * AI Generated Documentation
  * Represents the YoroiEntity, a custom Iron Golem entity with unique attributes and behaviors.
  * This entity contains an idle animation state and custom animation logic triggered on client-side.
  * It extends the IronGolemEntity class and overrides certain methods for custom functionality.

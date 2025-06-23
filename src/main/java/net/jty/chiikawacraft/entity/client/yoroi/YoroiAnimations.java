@@ -5,6 +5,7 @@ import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
 /**
+ * AI Generated Documentation
  * The YoroiAnimations class provides predefined animation sequences
  * for a Yoroi character. These animations are designed to specify
  * movement behaviors for various parts of the character's body such as

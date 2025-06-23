@@ -11,7 +11,8 @@ import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
 
 /**
- * Study only Not Implemented in final game
+ * AI Generated Documentation
+ * Study only, Not Implemented in final game
  * HealerScreenHandler is responsible for managing the server-side logic of the Healer Screen
  * in the ChiikawaCraft mod. It extends the ScreenHandler class and connects the player
  * inventory with the inventory/block entity related to the Healer feature.

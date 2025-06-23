@@ -5,6 +5,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
 /**
+ * AI Generated Documentation
  * A utility class that defines custom food components for use in modded items.
  * This class primarily serves as a central repository for custom food definitions
  * to be used in conjunction with items to provide specific nutritional and status effects.

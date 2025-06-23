@@ -7,6 +7,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
+ * AI Generated Documentation
+ * Embora não utilizado, se trata de uma ferramenta importantissima no desenvolvimento de mods
+ * pois possibilita a insersão de código em métodos do proprio jogo.
  * A mixin class used to inject custom behavior into the MinecraftServer's loadWorld method.
  *
  * This class modifies the behavior of the {@code loadWorld()} method by injecting code at the

@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
 /**
+ * AI Generated Documentation
  * The ChiikawaModel class is a custom model implementation for the ChiikawaEntity.
  * This model is designed to define the visual parts and animations of the Chiikawa entity in Minecraft.
  * It extends the SinglePartEntityModel class and specifies the model's structure and behaviors.

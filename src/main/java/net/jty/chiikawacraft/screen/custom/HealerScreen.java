@@ -10,7 +10,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 /**
- * Study only Not Implemented in final game
+ * AI Generated Documentation
+ * Study only, Not Implemented in final game
  * HealerScreen is a graphical user interface (GUI) class responsible for rendering
  * the client-side interface of the Healer Screen in the ChiikawaCraft mod. It extends
  * the HandledScreen class and ties to the HealerScreenHandler for managing interactions

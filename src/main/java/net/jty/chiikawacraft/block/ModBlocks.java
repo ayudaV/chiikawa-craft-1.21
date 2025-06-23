@@ -15,6 +15,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 /**
+ * AI Generated Documentation
  * The ModBlocks class is responsible for defining and registering custom blocks
  * used within the ChiikawaCraft mod. This class encapsulates the block instances,
  * their associated block items, and the utility methods required for registration

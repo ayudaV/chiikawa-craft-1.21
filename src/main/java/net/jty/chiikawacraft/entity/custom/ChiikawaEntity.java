@@ -5,21 +5,17 @@ import net.jty.chiikawacraft.item.ModItems;
 import net.jty.chiikawacraft.sound.ModSounds;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.data.DataTracker;
-import net.minecraft.entity.data.TrackedData;
-import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 
 /**
+ * AI Generated Documentation
  * Represents the ChiikawaEntity, a friendly and catchable creature introduced
  * in the ChiikawaCraft mod. This entity extends the AbstractChiikawaEntity
  * and inherits its core functionality while overriding specific behaviors and

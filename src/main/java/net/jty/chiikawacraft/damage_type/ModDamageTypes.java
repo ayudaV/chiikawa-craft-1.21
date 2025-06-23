@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
 /**
+ * AI Generated Documentation
  * ModDamageTypes is a utility class responsible for managing custom damage types
  * used by the ChiikawaCraft mod. It provides functionality for registering and
  * referencing mod-specific damage types, and constructing relevant instances of
